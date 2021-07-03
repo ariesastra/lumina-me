@@ -1,0 +1,22 @@
+{
+  "name": "lumina-me",
+  "version": "1.0.0",
+  "description": "Create Crypto Currency Standing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ariesastra/lumina-me"
+  },
+  "author": "Arie Sastra",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.9"
+  }
+}
