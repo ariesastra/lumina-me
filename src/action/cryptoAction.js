@@ -9,7 +9,7 @@ import {
 } from '../constant/cryptoContant'
 
 // GET LIST UNIVERSITY DATA
-export const listCrypto = () => async(dispatch) => {
+export const listCrypto = () => async (dispatch) => {
   try {
     // Request payload
     dispatch({

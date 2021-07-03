@@ -13,10 +13,12 @@ function Table() {
 
     const cryptoList = useSelector(state => state.cryptoList)
     const {loading, crypto, error} = cryptoList
+
+    console.log(loading, crypto, error);
     
     useEffect(() => {
         // get all crypto
-        dispatch(listCrypto)
+        dispatch(listCrypto())
     },[dispatch])
 
     // DATATABLE THEME

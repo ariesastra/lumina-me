@@ -1,70 +1,92 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend
 
-## Available Scripts
+Displaying Crypto data.
 
-In the project directory, you can run:
+This is all I can deliver with 4 Hour, I'm trying using
+Redux and create component base React App, you can see
+my `src` folder, there are `action folder`, `constant folder`
+, and `reducer folder` for Redux purpose, and inside
+`components folder` there are all component for displaying
+single Hompage route.
 
-### `yarn start`
+Inside `component` folder, I'm create 2 folder called
+`layout` for put `global component`, so that global 
+component will be call in every page, and the other
+folder is `homepageSection`, that folder is for all
+homepage section component.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Redux Concept
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For displaying data, I tried to use redux state
+management, this is my concept.
 
-### `yarn test`
+#### Creating Store
+For Redux Store, im using this stack.
+ - [Redux](https://redux.js.org/)
+ - [Redux Thunk](https://www.npmjs.com/package/redux-thunk)
+ - [Redux DevTools Extension](https://www.npmjs.com/package/redux-devtools-extension)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inside this store, I'm pushing data to store into
+global state called criptoList.
 
-### `yarn build`
+#### Creating Constant
+In constat, im creating 3 kind of data fetching, 
+```bash
+CRYPTO_LIST_REQUEST
+CRYPTO_LIST_SUCCESS
+CRYPTO_LIST_FAIL
+```
+with those 3 type of data fetching will represent 
+an action in `action` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Reducer & Action
+After creating `Constant`, I'm creating folder called
+`reducer`, inside that will be have a framework of
+global state that will be call listCrypto in store.
+and then I'm creating last folder for Redux called
+`action` which is will do some action when we call
+that state from Redux.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `yarn eject`
+- [Axios](https://www.npmjs.com/package/axios) 
+- [Bootstrap](https://www.npmjs.com/package/bootstrap)
+- [React Bootstrap](https://www.npmjs.com/package/react-bootstrap)
+- [React Data Table](https://www.npmjs.com/package/react-data-table-component)
+- [Redux](https://www.npmjs.com/package/redux)
+- [React Redux](https://www.npmjs.com/package/react-redux)
+- [Redux Devtools Extension](https://www.npmjs.com/package/redux-devtools-extension)
+- [Redux Thunx](https://www.npmjs.com/package/redux-thunk)
+- [Styled Components](https://styled-components.com/docs/basics#installation)
+## Installation 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To use this project, you can do this step.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - Go to my github
+```bash
+https://github.com/ariesastra/lumina-me
+```
+ - Clone it using
+```bash
+git clone https://github.com/ariesastra/lumina-me.git
+```
+ - Move to Directory
+```bash 
+cd lumina-me
+```
+ - Install Dependencies
+ ```bash
+npm install
+```
+ - run node command with
+```bash
+npm start
+```
+ - Open this url to see json data
+```bash
+localhost:3000
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    
