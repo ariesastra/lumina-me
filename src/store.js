@@ -2,7 +2,11 @@ import { combineReducers, applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import {composeWithDevTools} from "redux-devtools-extension";
 
-const reducer = combineReducers({})
+import {cryptoListReducer} from "./reducer/cryptoReducer"
+
+const reducer = combineReducers({
+    cryptoList: cryptoListReducer,
+})
 
 const initialState = {}
 
